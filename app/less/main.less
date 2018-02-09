@@ -1,0 +1,422 @@
+/*!
+autor: Karasik Vadim
+project: cdls mining
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: 'exo_2.0semi_bold';
+    src: url('../fonts/Exo2.0-SemiBold-webfont.eot');
+    src: url('../fonts/Exo2.0-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2.0-SemiBold-webfont.woff') format('woff'),
+         url('../fonts/Exo2.0-SemiBold-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2.0-SemiBold-webfont.svg#exo_2.0semi_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'exo_2.0medium';
+    src: url('../fonts/Exo2.0-Medium-webfont.eot');
+    src: url('../fonts/Exo2.0-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2.0-Medium-webfont.woff') format('woff'),
+         url('../fonts/Exo2.0-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2.0-Medium-webfont.svg#exo_2.0medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'exo_2.0regular';
+    src: url('../fonts/Exo2.0-Regular-webfont.eot');
+    src: url('../fonts/Exo2.0-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2.0-Regular-webfont.woff') format('woff'),
+         url('../fonts/Exo2.0-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2.0-Regular-webfont.svg#exo_2.0regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'exo_2.0light';
+    src: url('../fonts/Exo2.0-Light-webfont.eot');
+    src: url('../fonts/Exo2.0-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2.0-Light-webfont.woff') format('woff'),
+         url('../fonts/Exo2.0-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Exo2.0-Light-webfont.svg#exo_2.0light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container-fluid{padding: 0}
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: 'exo_2.0regular';
+}
+
+h1{
+    font-size: 500%;
+    line-height: 1.1;
+    font-family: 'exo_2.0semi_bold';
+    color: #ffffff;
+    margin-bottom: 20px;
+    
+    @media(max-width: 650px){
+        font-size: 350%;
+    }
+}
+
+h2{
+    margin: 0 0 20px;
+    font-size: 300%;
+    line-height: 1.2;
+    font-family: 'exo_2.0medium';
+    text-align: left;
+    color: #2c3e50;
+    
+    @media(max-width: 768px){
+        font-size: 350%;
+        line-height: 1.1;
+    }
+}
+
+h3{
+    font-size: 250%;
+    font-family: 'exo_2.0medium';
+    margin: 10px 0;
+    
+    @media(max-width: 1200px){
+        font-size: 200%;
+        line-height: 1.1;
+    }
+}
+
+header{
+
+    .top-line{
+        background: #fcfcfc;
+        padding: 5px 15px 5px 0;
+    }
+    
+    .banner{
+        background: url(../img/header-bg.jpg) no-repeat 100% 50%;
+        background-size: cover;
+        text-align: left; 
+        margin: 0;
+        min-height: 550px;
+        padding: 130px 0 20px;
+          
+        @media(max-width: 768px){
+            padding: 50px 20px;
+            background-position: 50% 50%;  
+        }
+    }
+    
+    p{
+        margin: 0 auto 20px;
+        font-size: 250%;
+        font-family: 'exo_2.0light';
+        line-height: 1.2;
+        color: #ffffff;
+        text-transform: none;
+        
+        @media(max-width: 650px){
+            font-size: 210%;
+            line-height: 1.2;
+        }
+    }
+
+    .button-holder{
+        @media(max-width: 768px){
+            text-align: center;
+        }
+    }
+
+    .logo{
+        @media(max-width: 768px){
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.contacts{
+    text-align: right;
+    font-family: 'exo_2.0light';
+    font-size: 215%;
+    display: block;
+    margin: 20px 0 0;
+    
+    a{
+        margin: 0 2%;
+        padding-left: 35px;
+        text-decoration: none;
+        color: #767676;
+        
+        &:hover{
+            color: #868686;
+            text-decoration: none;
+        }
+        
+        &:focus{
+            color: #868686;
+            text-decoration: none;    
+        }
+        
+        &[href^="tel"]{
+            background: url(../img/headset.png) no-repeat 0% 50%;    
+        } 
+        
+        &[href^="mailto"]{
+            background: url(../img/send.png) no-repeat 0% 50%;    
+        }
+    }
+    
+    @media(max-width: 768px){
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    @media(max-width: 992px){
+        font-size: 200%;   
+    }
+}
+
+.components{
+    background: #F2F2F2;
+
+    .component{
+        background: #f2f2f2;
+        border: 3px solid #fff;
+        border-bottom: none;
+        padding: 30px;
+        
+        img{
+            float: right;
+            margin-left: 5px;
+        }
+        
+        p{
+            font-size: 170%;
+            line-height: 1.2;
+        }
+    }
+}
+
+button, .submit{
+    color: #ffffff;
+    line-height: 1.2;
+    font-size: 200%;
+    font-family: 'exo_2.0light';
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 3px;
+    background: #3eb357;
+
+    &:hover{
+        background: #46c862;  
+    }
+}
+
+.item{
+    padding: 70px 0;
+    
+    .img-holder{
+        text-align: center;
+    }
+    
+    img{
+        width: 100%;
+        max-width: 500px;
+        margin-top: 50px;
+    }
+    
+    p{
+        font-size: 170%;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .price{
+        margin-top: 30px;
+        font-size: 200%;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+}
+
+.advantages{
+    font-size: 170%;
+    line-height: 1.2;
+    list-style: disc;
+    list-style-position: outside;
+    
+    li{
+        margin: 0 0 10px 15px;
+    }
+}
+
+.bg-gray{
+    background: #f2f2f2;
+}
+
+.aboutus{
+    text-align: center;
+    padding: 50px 0;
+    
+    h2{
+        text-align: center;
+        font-size: 450%;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        
+        @media(max-width: 768px){
+            font-size: 400%;
+            line-height: 1;
+        }
+    }
+    
+    .adv{
+        padding: 0 50px;
+    }
+    
+    p{
+        font-size: 170%;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    
+}
+
+footer{
+    background: #333333;
+    padding: 50px 0;
+    
+    h2{
+        color: #adadad;
+    }
+    
+    li{
+        color: #fff;
+        font-size: 160%;
+        line-height: 1.4;
+    }
+}
+
+.modal-form{
+    padding: 40px 50px;
+    position: fixed;
+    left: 0;
+    top: 25%;
+    right: 0;
+    margin: auto;
+    max-width: 350px;
+    background: #ffffff;
+    border-radius: 5px;
+    z-index: 9999;
+    
+    input[type="submit"]{
+        display: block;
+        width: 100%;
+    }
+    
+    input[type="text"],
+    input[type="tel"]{
+        display: block;
+        width: 100%;
+        border: 1px solid #dfdfdf;
+        border-radius: 3px;
+        padding: 10px 0 10px 40px;
+        margin-bottom: 15px;
+        color: #868686;
+        font-size: 160%;
+        
+        &.name{
+            background: url(../img/name-icon.png) no-repeat 10px 50%;
+        }
+
+        &.tel{
+            background: url(../img/phone-icon.png) no-repeat 10px 50%;
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,.7);
+}
+
+//Extra small devices Phones (<768px)	
+//Small devices Tablets (≥768px)	
+//Medium devices Desktops (≥992px)	
+//Large devices Desktops (≥1200px)
+
+
+
